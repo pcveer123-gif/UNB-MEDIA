@@ -1,0 +1,8 @@
+{
+  "name": "UNB Media Ind",
+  "description": "Editorial influencer marketing agency connecting brands with elite creators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

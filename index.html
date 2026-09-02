@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch ? originalFetch.bind(window) : undefined;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return currentFetch;
+            },
+            set: function(fn) {
+              currentFetch = fn;
+            }
+          });
+        } catch (e) {}
+      })();
+    </script>
+    <title>UNB Media Ind | Influencer Marketing Agency</title>
+    <meta name="description" content="UNB Media Ind connects brands with relevant creators to build authentic, engaging and impactful influencer marketing campaigns." />
+    <meta property="og:title" content="UNB Media Ind | Influencer Marketing Agency" />
+    <meta property="og:description" content="UNB Media Ind connects brands with relevant creators to build authentic, engaging and impactful influencer marketing campaigns." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&family=JetBrains+Mono:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0a0a0a] text-white antialiased selection:bg-[#ff2e2e] selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
